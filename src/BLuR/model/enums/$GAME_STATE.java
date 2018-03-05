@@ -1,0 +1,5 @@
+package BLuR.model.enums;
+
+public enum $GAME_STATE {
+    START_SCREEN,CHARACTER_CREATION_SCREEN,GAME_SCREEN
+}

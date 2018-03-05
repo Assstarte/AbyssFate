@@ -1,0 +1,90 @@
+
+
+.root{
+	overflow: hidden;
+}
+#main{
+
+	-fx-background-image: url("../../resources/img/backgrounds/start-screen-bg.jpg") 50% 50% no-repeat;
+    -fx-background-size: cover;
+
+}
+
+.screen{
+	-fx-background-image: url("../../resources/img/bg_game.jpg");
+}
+
+.combobox{
+	-fx-background-color: #fff;
+}
+
+
+.button {
+    -fx-padding: 5 22 5 22;
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #1d1d1d;
+    -fx-font-family: "Marmelad";
+    -fx-font-size: 30px;
+    -fx-font-size: 18pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+/*.button:hover{
+	-fx-background-color: #fff;
+}*/
+
+.button:active{
+	-fx-background-color: #fff;
+}
+
+
+.textflow{
+    /*-fx-background-color: #000;*/
+    /*-fx-background-image: url("../../resources/img/backgrounds/area-bg-2.jpg") 50% 50% no-repeat;*/
+    /*-fx-background-size: cover;*/
+    -fx-font-family: "Pacifico";
+    -fx-font-size: 30px;
+	-fx-text-fill: #fff;
+
+}
+
+.area2{
+    -fx-background-image: url("../../resources/img/backgrounds/area-bg-3.jpg") 50% 50% no-repeat;
+    -fx-background-size: cover;
+}
+
+.inventory{
+    -fx-background-color: #000;
+    -fx-opacity: 0;
+}
+
+.button-close{
+    fx-font-size: 35px;
+    fx-color: red;
+
+}
+
+.stats{
+    -fx-font-family: "Permanent Marker";
+    -fx-font-size: 30px;
+}
+
+.text-area {
+    -fx-background-color: transparent;
+}
+
+.textarea .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.textarea .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+
+.textarea .scroll-pane .content{
+    -fx-background-color: transparent;
+}

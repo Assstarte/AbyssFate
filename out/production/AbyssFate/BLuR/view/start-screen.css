@@ -1,0 +1,12 @@
+#main{
+
+    -fx-background-image: url("../../resources/img/backgrounds/start-screen-bg.jpg") 50% 50% no-repeat;
+    -fx-background-size: cover;
+
+}
+
+.button {
+    -fx-border: none;
+    /*-fx-background-image: url("../../resources/img/backgrounds/start-screen-bg.jpg") 50% 50% no-repeat;*/
+
+}
