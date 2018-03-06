@@ -172,12 +172,12 @@ public class GameScreenController {
         Button_4.setVisible(false);
     }
 
-    public void printActText(String t){
-        printer.printText(Act_Screen,t);
+    public void printActText(String t, $COLOR clr){
+        printer.printText(Act_Screen,t,clr);
     }
 
-    public void addActText(String t){
-        printer.addText(Act_Screen,t);
+    public void addActText(String t, $COLOR clr){
+        printer.addText(Act_Screen,t,clr);
     }
 
     public void handleInventory(){

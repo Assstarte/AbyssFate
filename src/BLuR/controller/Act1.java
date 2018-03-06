@@ -30,8 +30,8 @@ public class Act1 {
             if(Button == 4 && scene == 0) {
                 printFinished = false;
                 sceneFound = true;
-                res = "\t\t\t\t\t\t\t\t\t\t\t /rАкт 1\n \t\t\t /sПробуждение";
-                controller.printActText(res);
+                res = "\t\t\t Акт 1\n \t\t\t Пробуждение";
+                controller.printActText(res,$COLOR.AQUA);
                 controller.editButton4("Далее");
                 printFinished = true;
 
@@ -42,7 +42,7 @@ public class Act1 {
                 printFinished = false;
                 sceneFound = true;
                 res = "Черный холод витал вокруг...\nЕдва открыв глаза вы почувствовали сильную боль в области ребер\nПодняв мантию и обнажив торс,вы обнаружили рану с синеватыми оттенками.";
-                controller.printActText(res);
+                controller.printActText(res,$COLOR.ICE);
                 printFinished = true;
 
                 break;
@@ -52,7 +52,7 @@ public class Act1 {
                 printFinished = false;
                 sceneFound = true;
                 res = "К вам подошел лучник и представился как Лилиан.\nПо его внешнему виду было понятно, что он эльф\nНемного подождав вы решили идти на крайние меры\nТестовая строка...";
-                controller.addActText(res);
+                controller.addActText(res, $COLOR.WHITE);
                 printFinished = true;
 
                 break;
@@ -62,11 +62,11 @@ public class Act1 {
                 printFinished = false;
                 sceneFound = true;
 
-                controller.addActText("Холод ");
-                controller.addActText("становился все сильнее... ");
-                controller.addActText("Немного прищурившись вы заметили");
-                controller.addActText("костер");
-                controller.addActText("неподалеку\n");
+                controller.addActText("Холод ", $COLOR.ICE);
+                controller.addActText("становился все сильнее... ",$COLOR.WHITE);
+                controller.addActText("Немного прищурившись вы заметили ", $COLOR.WHITE);
+                controller.addActText("костер", $COLOR.FIRE);
+                controller.addActText("неподалеку\n", $COLOR.WHITE);
                 printFinished = true;
                 System.out.println();
                 controller.cls();
