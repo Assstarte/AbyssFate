@@ -31,7 +31,6 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.util.Duration;
-import org.fxmisc.richtext.StyledTextArea;
 
 public class GameScreenController {
 
@@ -70,7 +69,6 @@ public class GameScreenController {
 
     private DelayedPrinter printer = new DelayedPrinter();
 
-    private StyledTextArea<String, TextFlow> styledTextArea;
 
     @FXML
     private TextFlow flow = new TextFlow();
@@ -259,10 +257,9 @@ public class GameScreenController {
         return printer;
     }
 
-
-
-
-
+    public AbyssFateApp getGameApp() {
+        return gameApp;
+    }
 }
 
 

@@ -5,7 +5,6 @@ import BLuR.model.enums.$COLOR;
 import BLuR.utils.DelayedPrinter;
 import BLuR.utils.Texter;
 import BLuR.view.GameScreenController;
-import org.fxmisc.richtext.StyledTextArea;
 
 public class Act1 {
 
@@ -13,6 +12,7 @@ public class Act1 {
 
     private DelayedPrinter printer = new DelayedPrinter();
     private GameScreenController controller;
+    private AbyssFateApp gameApp;
     private boolean sceneFound;
 
     public static boolean printFinished = false;
@@ -21,6 +21,7 @@ public class Act1 {
     public String getActScene(int Button){
 
         controller = ActLogic.getController(); // Получаем контроллер для управления окном
+        gameApp = controller.getGameApp(); // Получаем управление приложением
         String res =""; // На всякий случай результат сделаем 0
 
 
@@ -61,14 +62,24 @@ public class Act1 {
             if(Button == 4 && scene == 3){
                 printFinished = false;
                 sceneFound = true;
+                controller.cls();
+                controller.printActText("Холод становился все сильнее\n Немного прищурившись, вы заметили костер вдали.", $COLOR.ICE);
 
-                controller.addActText("Холод ", $COLOR.ICE);
-                controller.addActText("становился все сильнее... ",$COLOR.WHITE);
-                controller.addActText("Немного прищурившись вы заметили ", $COLOR.WHITE);
-                controller.addActText("костер", $COLOR.FIRE);
-                controller.addActText("неподалеку\n", $COLOR.WHITE);
                 printFinished = true;
                 System.out.println();
+                controller.cls();
+
+                break;
+            }
+
+            if(Button == 4 && scene == 4){
+                printFinished = false;
+                sceneFound = true;
+                controller.cls();
+                controller.printActText("НА ВАС НАПАЛИ!", $COLOR.FIRE);
+
+                printFinished = true;
+                System.out.println("Testing");
                 controller.cls();
 
                 break;

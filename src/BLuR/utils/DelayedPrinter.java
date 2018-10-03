@@ -226,4 +226,8 @@ public class DelayedPrinter {
 
 
     }
+
+    public void addTextMulti(TextFlow area, String text, $COLOR color){
+
+    }
 }

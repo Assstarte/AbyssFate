@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="AbyssFate_QA">
+    <output-path>$PROJECT_DIR$/out/artifacts/AbyssFate_QA</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="BLuR.AbyssFateApp" />
+        <option name="description" value="QA 1.0" />
+        <option name="height" value="1080" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="AbyssFate_QA" />
+        <option name="vendor" value="AstarteQ" />
+        <option name="version" value="0.1" />
+        <option name="width" value="1920" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="AbyssFate.jar">
+        <element id="module-output" name="AbyssFate" />
+      </element>
+    </root>
+  </artifact>
+</component>

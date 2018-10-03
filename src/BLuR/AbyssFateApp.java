@@ -15,6 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -45,8 +46,8 @@ public class AbyssFateApp extends Application {
 
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("AbyssFate");
-        this.primaryStage.setMinWidth(1600);
-        this.primaryStage.setMinHeight(900);
+        this.primaryStage.setMinWidth(1366);
+        this.primaryStage.setMinHeight(768);
 
         initRootLayout(); //Инициализируем корневой макет
 
@@ -91,14 +92,24 @@ public class AbyssFateApp extends Application {
 
     public void showGameScreen(){
         try {
-            // Загружаем сведения об адресатах.
+
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(AbyssFateApp.class.getResource("view/GameScreen.fxml"));
-            AnchorPane personOverview = (AnchorPane) loader.load();
+            AnchorPane gameScreen;
+            double userWidth = Screen.getPrimary().getVisualBounds().getWidth();
+            double userHeight = Screen.getPrimary().getVisualBounds().getHeight();
+            if(userWidth <= 1400 && userHeight <= 780){
+                loader.setLocation(AbyssFateApp.class.getResource("./view/GameScreen_1366.fxml"));
+
+                gameScreen = (AnchorPane) loader.load();
+            } else{
+                loader.setLocation(AbyssFateApp.class.getResource("./view/GameScreen.fxml"));
+                gameScreen = (AnchorPane) loader.load();
+            }
+
 
 
             // Помещаем сведения об адресатах в центр корневого макета.
-            rootLayout.setCenter(personOverview);
+            rootLayout.setCenter(gameScreen);
         } catch (IOException e) {
             e.printStackTrace();
         }
